@@ -1,0 +1,20 @@
+# Source: jx-golang12/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: jx-golang12
+  labels:
+    chart: "jx-golang12-0.0.1"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'jx-golang12'
+  namespace: jx-production
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+      name: http
+  selector:
+    app: jx-golang12-jx-golang12
