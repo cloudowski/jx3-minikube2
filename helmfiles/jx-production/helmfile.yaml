@@ -1,0 +1,11 @@
+filepath: ""
+namespace: jx-production
+repositories:
+- name: dev
+  url: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts/
+releases:
+- chart: dev/jx-golang12
+  version: 0.0.1
+  name: jx-golang12
+templates: {}
+renderedvalues: {}
