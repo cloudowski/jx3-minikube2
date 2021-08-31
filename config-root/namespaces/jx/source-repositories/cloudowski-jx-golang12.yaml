@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: cloudowski
+    provider: github
+    repository: jx-golang12
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: cloudowski-jx-golang12
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/cloudowski/jx-golang12.git
+  org: cloudowski
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx-golang12
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/cloudowski/jx-golang12
